@@ -21,6 +21,35 @@ Time-related feature
 
 import numpy as np
 
+from scipy.integrate import simpson
+def find_zero_crossings(t, y):
+    transition_indices = np.where((np.sign(y[:-1]) * np.sign(y[1:])) == -1)[0]
+
+    t0 = t[transition_indices]
+    t1 = t[transition_indices + 1]
+    y0 = y[transition_indices]
+    y1 = y[transition_indices + 1]
+    slope = (y1 - y0) / (t1 - t0)
+    transition_times = t0 - y0 / slope
+
+    return transition_times
+
+def pos_trapz(y, x=None, dx=1.0):
+    if x is None:
+        x = np.arange(len(y))*dx
+    xz = find_zero_crossings(x, y)
+
+    x2 = np.append(x, xz)
+    y2 = np.append(y, np.zeros_like(xz))
+
+    k = x2.argsort()
+    x2 = x2[k]
+    y2 = y2[k]
+
+    pos_y2 = np.maximum(y2, 0.0)
+
+    return np.trapz(pos_y2, x2)
+
 def extract_features(df_features, filtered_ppg, fs):
 
     ##Amplitude features
@@ -66,5 +95,16 @@ def extract_features(df_features, filtered_ppg, fs):
     pi2pi_po.append(None)
     pi2pi_po = np.array(pi2pi_po)
     df_features['pi2pi_po'] = pi2pi_po
+
+    #Area-related features
+    #Area between 2 sp
+    area=[]
+    for i in range(len(df_features)-1):
+        val = pos_trapz(filtered_ppg[df_features.loc[i]['onset'].astype(int):df_features.loc[i+1]['onset'].astype(int)])
+        area.append((val))
+    area.append(None)
+    area = np.array(area)
+    df_features['area_peak'] = area
+
 
     return df_features

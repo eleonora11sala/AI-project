@@ -46,14 +46,14 @@ def find_dn(peaks, fiducials):
     return dn
 
 
-def extract_fiducials(signal, peaks):
+def extract_fiducials(signal, peaks, fs):
     sig = DotMap()
     sig.filt_sig = signal
     sig.v = signal
     sig.filt_d1 = signal
     sig.filt_d2 = signal
     sig.filt_d3 = signal
-    sig.fs = 128
+    sig.fs = fs
     sig.ppg
 
     a = PPG(s=sig)
@@ -62,7 +62,7 @@ def extract_fiducials(signal, peaks):
 
     speaks_check = []
     for i in range(len(peaks)):
-        speaks_check.append(int(check_speak(peaks[i], signal)[0]))
+        speaks_check.append(int(check_speak(peaks[i], signal)))
 
     on = find_on(speaks_check, fiducials)
     dn = find_dn(speaks_check, fiducials)

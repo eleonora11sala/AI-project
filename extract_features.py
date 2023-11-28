@@ -71,6 +71,8 @@ def extract_features(df_features, filtered_ppg, fs):
     ##Time-related features
     df_features['T1'] = df_features['diastolic_notch']/128 - df_features['peak_pos']/128
     df_features['T2'] = df_features['diastolic_notch']/128 - df_features['onset']/128
+    df_features['TP'] = df_features['peak_pos'] / 128 - df_features['onset'] / 128
+    df_features['ST'] = 1 / df_features['TP']
 
 
     # defining pi2pi_pr: time interval from SPi-1 to SPi

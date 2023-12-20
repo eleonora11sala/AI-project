@@ -108,5 +108,7 @@ def extract_features(df_features, filtered_ppg, fs):
     area = np.array(area)
     df_features['area_peak'] = area
 
+    df_features=df_features.drop(['peak_pos', 'onset', 'diastolic_notch'], axis=1)
+
 
     return df_features

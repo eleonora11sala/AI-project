@@ -1,7 +1,5 @@
 
 import numpy as np
-
-
 def artifacts(speaks, filtered_ppg, annotations):
     adp = []
     for i in range(len(speaks)):

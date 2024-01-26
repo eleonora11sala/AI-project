@@ -1,0 +1,15 @@
+from keras import backend as K
+from keras.losses import CategoricalCrossentropy
+
+def get_weighted_loss(pos_weights, neg_weights, epsilon=1e-7):
+    def personalized_loss(y_true, y_pred):
+        # Define class weights based on the imbalance
+        class_weights = K.constant(neg_weights)  # Adjust weights as needed
+
+        # Apply the weights to the cross-entropy loss
+        weighted_loss = 0.0
+        for i in range(len(neg_weights)):
+            weighted_loss += CategoricalCrossentropy()(y_true[:,i], y_pred[:,i], sample_weight=class_weights[i])
+
+        return weighted_loss
+    return personalized_loss

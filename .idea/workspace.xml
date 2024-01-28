@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fcd9bd9-a673-4cbd-ad33-34a2c0eedf18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ExperimentalModelGrids.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExperimentalModelNoOut.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExperimentalModelOut.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExperimentalModelOutBinary.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentalModel.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentalModel.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepLearningBuona.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DeepLearningBuona.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,21 +25,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ele3",
-    "last_opened_file_path": "C:/Users/user/Desktop/AI-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ele3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/AI-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\AI-project" />
@@ -61,6 +57,7 @@
       <workItem from="1703064933939" duration="6821000" />
       <workItem from="1703074528272" duration="10681000" />
       <workItem from="1706007800273" duration="421000" />
+      <workItem from="1706438552824" duration="1921000" />
     </task>
     <servers />
   </component>

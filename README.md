@@ -15,3 +15,24 @@ Google colab
 Kaggle
 
 JetBrains PyCharm 
+
+## Jupyter notebooks' content:
+* extract_all_features.ipynb:
+* MachineLearningApproach.ipynb:
+* MachineLearningApproachBinary.ipynb:
+* DeepLearning.ipynb:
+* BinaryDeepLearning.ipynb:
+
+## Phyton functions' content:
+* loadData.py:
+* plot_signal.py:
+* preprocess.py:
+* artifacts.py:
+* extract_fiducials.py:
+* extract_features.py:
+
+## Useful folders' content:
+* train:
+* fiducials:
+* features:
+* signal_no_artifacts:
